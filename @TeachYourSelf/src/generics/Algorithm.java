@@ -77,9 +77,19 @@ public final class Algorithm {
 			if (p.check(list.get(begin))) {
 				return begin;
 			}
+			begin++;
 		}
 		return -1;
 	}
 	
-//	public static
+	// x > 0, y > 0
+	public static int gcd(int x, int y) {
+		int r = x % y;
+		while (r != 0) {
+			x = y;
+			y = r;
+			r = x % y;
+		}
+		return y;
+	}
 }
