@@ -19,7 +19,7 @@ public class CounterThread  extends Thread {
 	@Override
 	public void run() {
 		System.out.println("Counter thread started");
-		for (int i = 1;!interrupted(); i++) {
+		for (int i = 1; i < 20; i++) {
 			System.out.println(i);
 			try {
 				Thread.sleep(100);

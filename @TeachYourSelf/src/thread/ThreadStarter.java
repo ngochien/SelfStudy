@@ -27,9 +27,17 @@ public class ThreadStarter {
 		Thread input = new UserInputThread();
 		System.out.println("Main-Thread starts");
 		counter.start();
-		DoSomething.pause(1000);
+		try {
+			counter.join();
+			counter.interrupt();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		counter.interrupt();
-		System.out.println(Thread.currentThread());
+//		DoSomething.pause(1000);
+//		counter.interrupt();
+//		System.out.println(Thread.currentThread());
 		System.out.println("Main-Thread ended");
 		
 //		printer.start(); printer2.start(); printer3.start();

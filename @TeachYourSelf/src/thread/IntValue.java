@@ -26,7 +26,7 @@ public class IntValue extends Value<Integer> {
 		}
 		this.value = value;
 		valueReady = true;
-		notify();
+		notifyAll();
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class IntValue extends Value<Integer> {
 			}
 		}
 		valueReady = false;
-		notify();
+		notifyAll();
 		return value;
 	}
 
