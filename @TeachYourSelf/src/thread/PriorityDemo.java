@@ -24,8 +24,8 @@ class PriorityDemo {
 		} catch (InterruptedException e) {
 		}
 		bt.setFinished(true);
-//		ct.setFinished(true);
-		ct.interrupt();
+		ct.setFinished(true);
+//		ct.interrupt();
 		System.out.println("End");
 	}
 }

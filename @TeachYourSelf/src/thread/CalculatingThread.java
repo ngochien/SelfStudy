@@ -17,7 +17,7 @@ class CalculatingThread extends Thread {
 	@Override
 	public void run() {
 		long sum = 0;
-		while (!interrupted()) {
+		while (!finished) {
 			sum += 1;
 //			System.out.println(sum);
 		}
