@@ -17,23 +17,23 @@ public class ProducerConsumer {
 
 		Value<Integer> v = new IntValue();
 		Producer p = new Producer(v);
-		Producer p1 = new Producer(v);
-		Producer p2 = new Producer(v);
-		Producer p3 = new Producer(v);
+//		Producer p1 = new Producer(v);
+//		Producer p2 = new Producer(v);
+//		Producer p3 = new Producer(v);
 		Consumer c = new Consumer(v);
-		Consumer c1 = new Consumer(v);
-		Consumer c2 = new Consumer(v);
-		Consumer c3 = new Consumer(v);
+//		Consumer c1 = new Consumer(v);
+//		Consumer c2 = new Consumer(v);
+//		Consumer c3 = new Consumer(v);
 
 		
 		c.start();
-		c1.start();
-		c2.start();
-		c3.start();
-		DoSomething.pause(1000);
+//		c1.start();
+//		c2.start();
+//		c3.start();
+//		DoSomething.pause(1000);
 		p.start();
-		p1.start();
-		p2.start();
+//		p1.start();
+//		p2.start();
 //		p3.start();
 	}
 

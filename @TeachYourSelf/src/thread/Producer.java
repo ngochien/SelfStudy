@@ -24,7 +24,7 @@ public class Producer extends Thread {
 		for (int i = 0; i < 10; i++) {
 			v.set(i);
 			System.out.println("Producer set: " + i);
-			DoSomething.pauseRandom(100);
+//			DoSomething.pauseRandom(100);
 		}
 	}
 }

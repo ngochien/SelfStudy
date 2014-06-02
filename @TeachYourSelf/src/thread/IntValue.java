@@ -17,29 +17,32 @@ public class IntValue extends Value<Integer> {
 	
 	@Override
 	synchronized public void set(Integer value) {
-		while (valueReady) {
+//		while (valueReady) {
+		this.value = value;
+		System.out.println("Value ready");
+		notify();
 			try {
 				wait();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-		}
-		this.value = value;
-		valueReady = true;
-		notifyAll();
+//		}
+		
+//		valueReady = true;
+		
 	}
 
 	@Override
 	synchronized public Integer get() {
-		while (!valueReady) {
+//		while (!valueReady) {
 			try {
 				wait();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-		}
-		valueReady = false;
-		notifyAll();
+//		}
+//		valueReady = false;
+		notify();
 		return value;
 	}
 
