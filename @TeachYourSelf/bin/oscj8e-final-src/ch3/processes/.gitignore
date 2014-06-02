@@ -1,0 +1,4 @@
+/.DS_Store
+/newproc-posix.c
+/newproc-win32.c
+/OSProcess.class
